@@ -1,0 +1,62 @@
+.playerDetailComment {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 100px;
+}
+
+.playerDetailCommentHeader {
+  display: flex;
+  gap: 10px;
+}
+
+.playerDetailCommentCnt {
+  color: blue;
+}
+
+.playerDetailCommentForm input {
+  padding: 16px 10px;
+  border-radius: 10px;
+  border: 1px solid #4DBAED;
+  outline-color: #1077a7;
+  width: 100%;
+  transition: .3s;
+}
+
+.playerDetailCommentForm input:active {
+  transform: scale(1.01);
+}
+
+.playerDetailCommentItems {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.playerDetailCommentPageList {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.playerDetailCommentPage {
+  width: 20px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.playerDetailCommentPageActive {
+  opacity: 1;
+  font-weight: bold;
+}
+
+.playerDetailCommentPage:hover {
+  cursor: pointer;
+}
+
+.playerDetailCommentBtn:hover {
+  cursor: pointer;
+}

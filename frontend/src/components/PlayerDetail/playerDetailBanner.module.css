@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.playerBanner {
+  width: 100%;
+  display: flex;
+}
+
+.playerBannerLeft {
+	width: 70%;
+	height: 300px;
+	background: black;
+	position: relative;
+	overflow: hidden;
+}
+
+.backgroundText {
+	display: inline-block;
+	font-size: 100px;
+	transform: rotate(-5deg);
+	color: white;
+	white-space: nowrap;
+	position: relative;
+	line-height: 100px;
+	font-family: 'Anton', sans-serif;
+  top: -100px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.bannerImg {
+	position: absolute;
+	height: 280px;
+	z-index: 1;
+	left: 0; 
+  right: 0; 
+	bottom: 0;
+  margin: 0 auto; 
+}
+
+.playerInfo {
+  width: 30%;
+  background: black;
+	opacity: .8;
+  color: white;
+  padding: 20px 30px;
+}
+
+.playerNickname {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.playerRealname {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.playerExtraInfo {
+  margin-bottom: 10px;
+}
