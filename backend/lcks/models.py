@@ -37,6 +37,6 @@ class TeamScore(models.Model):
     year = models.IntegerField()
 
 class Transfer(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    player = models.ForeignKey(Player, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
     year = models.IntegerField()

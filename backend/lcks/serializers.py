@@ -52,9 +52,20 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class TransferSerializer(serializers.ModelSerializer):
 
+    teamname = serializers.SerializerMethodField()
+    page_url = serializers.SerializerMethodField()
+
     class Meta:
         model = Transfer
         fields = '__all__'
+
+    def get_teamname(self, obj):
+        team = obj.team
+        return team.t_name
+
+    def get_page_url(self, obj):
+        team = obj.team
+        return team.page_url
 
 class TeamNameSerializer(serializers.ModelSerializer):
 

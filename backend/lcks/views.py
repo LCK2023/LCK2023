@@ -49,7 +49,9 @@ def vote(request, nickname):
     champions = request.data['info']
     for champion in champions:
         championvote = ChampionVote()
-        championvote.user = request.user
+        # championvote.user = request.user
+        user = get_user_model().objects.get(pk=1)
+        championvote.user = user
         championvote.player = player
         championvote.champion = champion
         championvote.save()
@@ -71,7 +73,9 @@ def comment(request, nickname):
         comment.user = request.user
         comment.player = player
         comment.save()
-        return Response(status=status.HTTP_201_CREATED)
+        comments = player.comment_set.all()
+        serializer = CommentSerializer(comments, many=True)
+        return Response(serializer.data)
 
 @api_view(['PUT', 'DELETE'])
 @permission_classes([IsAuthenticated])
@@ -90,11 +94,11 @@ def comment_edit(request, comment_id):
     
 
 # def tmp(request):
-#     player = Player()
-#     player.nickname = 'deft'
-#     player.realname = '홍길동'
-#     player.birth = '1997-12-12'
-#     player.debut_date = '2021-01-01'
-#     team = Team.objects.get(t_name='drx')
-#     player.team = team
-#     player.save()
+#     user = get_user_model().objects.get(pk=1)
+#     player = Player.objects.get(nickname='deft')
+#     content = 'asdfasdf'
+#     comment = Comment()
+#     comment.user = user
+#     comment.player = player
+#     comment.content = content
+#     comment.save()
