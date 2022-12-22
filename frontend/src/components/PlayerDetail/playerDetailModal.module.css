@@ -1,0 +1,147 @@
+.playerDetailModal {
+  position: fixed;
+  top: 100px;
+  width: 70%;
+  height: 600px;
+  border: 1px solid black;
+  background: #463E3E;
+  overflow: auto;
+  z-index: 2;
+  min-width: 600px;
+}
+
+.playerDetailModal::-webkit-scrollbar {
+  display: none;
+}
+
+.playerDetailModalInputBackground {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  background: #463E3E;
+  padding-top: 20px;
+  height: 80px;
+}
+
+.playerDetailModalInput {
+  position: sticky;
+  z-index: 3;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 10px;
+  border: none;
+  border-radius: 15px;
+  width: 30%;
+  background: #312b2b;
+  color: white;
+  transition: .2s;
+}
+
+.playerDetailModalInput:active {
+  transform: scale(1.05) translateX(-48%);
+}
+
+.playerDetailModalInput:focus {
+  outline: none;
+}
+
+.playerDetailModalExitBtn {
+  position: sticky;
+  color: white;
+  top: 20px;
+  left: 95%;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  background: #463E3E;
+  border: none;
+  z-index: 3;
+}
+
+.playerDetailModalExitBtn:hover {
+  cursor: pointer;
+}
+
+.playerDetailModalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 20px 40px;
+  gap: 10px;
+}
+
+.playerDetailModalItems {
+  width: 150px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: #5C5D61;
+  position: relative;
+  transition: .3s;
+}
+
+.playerDetailModalItems:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.heartFillImg {
+  position: absolute;
+  width: 20px;
+  top: 7px;
+  left: 7px;
+  animation: like .5s;
+}
+
+.heartBlankImg {
+  position: absolute;
+  width: 20px;
+  top: 7px;
+  left: 7px;
+}
+
+.championImg {
+  width: 100%;
+}
+
+.championName {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.playerDetailModalSelectFinishBtn {
+  position: sticky;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px 10px;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background: #4dbaeda1;
+  font-size: 16px;
+  transition: .3s;
+  color: black;
+}
+
+.playerDetailModalSelectFinishBtn:hover {
+  cursor: pointer;
+  background: #4DBAED;
+  transform: translateX(-50%) scale(1.05);
+}
+
+@keyframes like {
+  from {
+    opacity: 0; 
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
